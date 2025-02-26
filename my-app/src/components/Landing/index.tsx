@@ -4,20 +4,20 @@ import Image from "next/image";
 
 export default function Landing() {
   return (
-    <main className="flex justify-center h-fit">
+    <main className="flex justify-center">
       <section className="justify-items-center">
-        <h1 className="font-zain font-bold text-black text-6xl">Hello, im a Fullstack Developer</h1>
+        <h1 className="font-zain font-bold text-black md:text-6xl ss:text-3xl">Hello, im a Fullstack Developer</h1>
 
-        <article className="flex relative top-[50px] bg-[#7A63FF] h-[300px] w-[300px] overflow-hidden rounded-full border-2 border-[#7A63FF] shadow-2xl shadow-[#7A63FF]">
+        <article className="flex relative md:top-[50px] ss:top-[30px] bg-[#7A63FF] md:h-[300px] md:w-[300px] ss:h-[250px] ss:w-[250px] overflow-hidden rounded-full border-2 border-[#7A63FF] shadow-2xl shadow-[#7A63FF]">
           <Image src="/avatar.png" width={300} height={300} alt="avatar" className="object-cover" />
         </article>
-        <article className="mt-16 flex justify-center">
+        <article className="md:mt-16 ss:mt-12 flex justify-center">
           <Image 
             src="https://mattfarley.ca/img/hero-devices.svg" 
             width={1500} 
             height={1500} 
             alt="Img" 
-            className="w-1/2 max-w-[1500px]"
+            className="md:w-1/2 ss:w-[90%] max-w-[1500px]"
           />
         </article>
       </section>

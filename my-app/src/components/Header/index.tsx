@@ -8,18 +8,18 @@ export default function Header() {
 
   return (
     <header className="flex justify-center w-full">
-      <section className="flex justify-between xl:w-[70%] sm:w-[90%] ss:w-[90%] py-10">
+      <section className="flex justify-between xl:w-[70%] sm:w-[90%] ss:w-[90%] pb-10">
         <article className="w-[50%] sm:w-[30%] ss:w-[20%]">
-          <Image src='/logo.png' alt="Logo" width={80} height={80} className="hover:scale-105 transition duration-500 ease-in-out" />
+          <Image src='/purple-logo.svg' alt="Logo" width={150} height={150} className="hover:scale-105 transition duration-500 ease-in-out" />
         </article>
-        <nav className="hidden font-zain font-medium md:flex items-center w-[50%] sm:w-[70%] ss:w-[80%]">
+        <nav className="hidden font-zain font-medium md:flex items-center w-[50%] sm:w-[40%] ss:w-[80%]">
             <ul className="flex justify-around w-full items-center text-black text-2xl">
               <li className="hover:text-[#7A63FF] transition duration-200 ease-in-out">
                   <a href="/projetos">Projetos</a>
               </li>
-              <li className="hover:text-[#7A63FF] transition duration-200 ease-in-out">
+              {/* <li className="hover:text-[#7A63FF] transition duration-200 ease-in-out">
                   <a href="/skills">Skills</a>
-              </li>
+              </li> */}
               <li className="hover:text-[#7A63FF] transition duration-200 ease-in-out">
                   <a href="/sobre">Sobre Mim</a>
               </li>
@@ -36,19 +36,19 @@ export default function Header() {
         </div>
       </section>
       { menuOpen && (
-        <nav className="md:hidden absolute top-28 left-0 w-full bg-transparent shadow-md">
-          <ul className="flex flex-col items-center text-center text-black text-lg py-4">
-            <li className="py-2">
+        <nav className="md:hidden font-zain font-medium fixed top-[6.5rem] left-0 w-full bg-[#F8F8FF] shadow-md z-50">
+          <ul className="flex flex-col items-center text-center text-black text-2xl pb-4">
+            <li className="w-[40%] pb-2 border-b-[2px] border-[#7A63FF]">
               <a href="/projetos">Projetos</a>
             </li>
-            <li className="py-2">
+            {/* <li className="w-[40%] py-2 border-b-[2px] border-[#7A63FF]">
               <a href="/skills">Skills</a>
-            </li>
-            <li className="py-2">
+            </li> */}
+            <li className="w-[40%] py-2 border-b-[2px] border-[#7A63FF]">
               <a href="/sobre">Sobre Mim</a>
             </li>
-            <li className="py-2">
-              <a href="/contato" className="text-[#7A63FF] active:text-white active:bg-[#7A63FF] transition duration-200 ease-in-out border-2 border-[#7A63FF] rounded-xl px-4 py-2">
+            <li className="w-[40%] pt-6 pb-2">
+              <a href="/contato" className="text-[#7A63FF] active:text-white active:bg-[#7A63FF] transition duration-200 ease-in-out border-2 border-[#7A63FF] rounded-xl px-11 py-2">
                 Contato
               </a>
             </li>
