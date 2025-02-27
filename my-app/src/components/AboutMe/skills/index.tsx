@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Skills() {
   return (
-    <main className="flex relative top-[-180px] md:w-[74%] ss:w-[84%] h-fit bg-[#F8F8FF] border-[1px] border-[#E6ECF8] rounded-2xl">
+    <main className="flex relative top-[-180px] md:w-[74%] ss:w-[84%] h-fit bg-[#F8F8FF] border-[1px] border-[#E6ECF8] rounded-2xl shadow-sm">
       <article className="flex ss:flex-col md:flex-row w-full font-zain">
         <section className="flex-col justify-items-center text-center md:w-1/3 ss:w-full py-16 px-12 text-black md:border-r-[1px] ss:border-b-[1px] border-[#E6ECF8]">
           <div className="w-fit h-fit p-4 rounded-full bg-[#5BE9B9]">

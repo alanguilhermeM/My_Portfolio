@@ -1,6 +1,7 @@
 // import Image from "next/image";
 
 import AboutMe from "@/components/AboutMe";
+import Certifications from "@/components/Certifications";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Landing from "@/components/Landing";
@@ -11,6 +12,7 @@ export default function Home() {
       <Header />
       <Landing />
       <AboutMe />
+      <Certifications />
       <Footer />
     </div>
   );
