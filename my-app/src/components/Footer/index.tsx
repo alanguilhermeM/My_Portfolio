@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <main className="grid w-full">
       <aside className="md:w-[72%] ss:w-[90%] relative md:top-[55%] ss:top-[70%] justify-self-center h-fit rounded-xl bg-[#141c3a] shadow-sm shadow-[#141c3a]">
-        <div className="md:flex ss:grid md:justify-around ss:justify-center py-8 px-10 items-center text-center">
+        <div className="md:flex ss:grid md:justify-around ss:justify-center py-8 px-10 items-center text-white text-center">
           <h1 className="md:w-1/3 ss:w-full font-zain font-bold text-4xl">
             Start a project
           </h1>
@@ -49,7 +49,7 @@ export default function Footer() {
           alt="logo"
           className="md:pt-10 max-md:relative max-md:top-[45%]"
         />
-        <span className="ss:w-[70%] md:w-full flex-wrap font-zain font-medium text-3xl text-center">
+        <span className="ss:w-[70%] md:w-full flex-wrap font-zain font-medium text-3xl text-white text-center">
           Living, learning, & leveling up one day at a time.
         </span>
         <article className="flex justify-around w-1/2 md:p-10">

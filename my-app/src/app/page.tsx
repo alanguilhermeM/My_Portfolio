@@ -5,6 +5,7 @@ import Certifications from "@/components/Certifications";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Landing from "@/components/Landing";
+import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Landing />
       <AboutMe />
       <Certifications />
+      <Testimonials />
       <Footer />
     </div>
   );

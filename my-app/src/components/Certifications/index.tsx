@@ -43,7 +43,7 @@ export default function Certifications() {
                   //   onMouseEnter={() => setHoveredIndex(certification.id)}
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
-                  <span className="relative md:top-10 ss:top-4 w-[80%] font-zain md:text-3xl ss:text-xl">
+                  <span className="relative text-white md:top-10 ss:top-4 w-[80%] font-zain md:text-3xl ss:text-xl">
                     Click the button below to be redirected to the certificate
                     credentials
                   </span>
