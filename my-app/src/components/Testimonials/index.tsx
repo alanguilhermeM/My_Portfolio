@@ -10,11 +10,11 @@ import {
 
 export default function Testimonials() {
   return (
-    <main className="flex-col justify-self-center text-center w-[75%] h-fit">
-      <h1 className="text-[#141c3a] font-zain font-bold text-4xl pb-2">
+    <main className="flex-col justify-self-center text-center w-[75%] h-fit pb-14">
+      <h1 className="text-[#141c3a] dark:text-white font-zain font-bold text-4xl pb-2">
         Testimonials
       </h1>
-      <p className="text-[#141c3a] font-zain text-2xl pb-10">
+      <p className="text-[#141c3a] dark:text-white font-zain text-2xl pb-10">
         People I&apos;ve worked with have said some nice things...
       </p>
       <section className="md:w-1/2 max-sm:w-full justify-self-center">

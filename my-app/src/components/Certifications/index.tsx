@@ -1,25 +1,17 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import certificationsList from "@/utils/certificationsList";
 import Image from "next/image";
 
 export default function Certifications() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
-  useEffect(() => {
-    certificationsList.map((certification) => {
-      for (let i = 0; i <= certificationsList.length; i++) {
-        console.log(certification);
-      }
-    });
-  }, []);
-
   return (
-    <main className="flex-col justify-self-center text-center w-[75%] h-fit">
-      <h1 className="text-[#141c3a] font-zain font-bold text-5xl pb-6">
+    <main className="flex-col justify-self-center text-center w-[75%] h-fit ">
+      <h1 className="text-[#141c3a] dark:text-white font-zain font-bold text-5xl pb-6">
         My Certificates
       </h1>
-      <span className="text-[#141c3a] font-zain text-2xl pb-10">
+      <span className="text-[#141c3a] dark:text-white font-zain text-2xl pb-10">
         Here are a few of of my certificates that i aquired around time.
       </span>
       <section className="grid md:grid-cols-3 ss:grid-cols-1 gap-4 pt-10">
@@ -32,14 +24,14 @@ export default function Certifications() {
                 height={450}
                 alt="certificate"
                 className={`rounded-xl transition-all duration-500 ${
-                  hoveredIndex === index ? "blur-sm" : ""
+                  hoveredIndex === index ? "blur-sm brightness-50" : ""
                 }`}
                 onMouseEnter={() => setHoveredIndex(certification.id)}
                 // onMouseLeave={() => setHoveredIndex(null)}
               />
               {hoveredIndex === index && (
                 <div
-                  className="absolute inset-0 flex flex-wrap items-center justify-center rounded-xl hover:scale-105 transition-all ease-in-out duration-500  bg-[#141c3a] "
+                  className="absolute inset-0 flex flex-wrap items-center justify-center rounded-xl hover:scale-105 transition-all ease-in-out duration-500  "
                   //   onMouseEnter={() => setHoveredIndex(certification.id)}
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
@@ -58,7 +50,7 @@ export default function Certifications() {
           );
         })}
       </section>
-      <div className="my-40 justify-self-center w-[133.3%] border-[0.0001px] border-gray-200" />
+      <div className="my-40 justify-self-center w-[133.3%]" />
     </main>
   );
 }

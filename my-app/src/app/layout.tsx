@@ -1,11 +1,12 @@
-import './globals.css'
-import { Zain } from 'next/font/google'
+import { ThemeProvider } from "@/components/theme-provider";
+import "./globals.css";
+import { Zain } from "next/font/google";
 
 const mainFontFamily = Zain({
-  weight: ['400', '700'],
-  subsets: ['latin'],
-  variable: '--family-font-main--',
-})
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--family-font-main--",
+});
 
 export default function RootLayout({
   children,
@@ -15,7 +16,14 @@ export default function RootLayout({
   return (
     <html lang="en" className={mainFontFamily.variable}>
       <body>
-        <main>{children}</main>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <main>{children}</main>
+        </ThemeProvider>
       </body>
     </html>
   );
