@@ -1,16 +1,36 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import navList from "@/utils/navList";
+// import { useLocale } from "@/context/LocaleContext";
+// import { useIntl } from "react-intl";
+import { useLocale } from "@/context/LocaleContext";
+import { useIntl } from "react-intl";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { locale } = useLocale();
+  const intl = useIntl();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (menuOpen) {
+        setMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [menuOpen]);
 
   return (
     <header className="flex justify-center w-full">
       <section className="flex justify-between xl:w-[70%] sm:w-[90%] ss:w-[90%] pb-10">
-        <article className="w-[50%] sm:w-[30%] ss:w-[20%]">
+        <article className="w-[50%] max-sm:w-[20%] max-sm:scale-150">
           <Image
             src="/purple-logo.svg"
             alt="Logo"
@@ -21,32 +41,26 @@ export default function Header() {
         </article>
         <nav className="hidden font-zain font-medium md:flex items-center w-[50%] sm:w-[40%] ss:w-[80%]">
           <ul className="flex justify-around w-full items-center text-black dark:text-white text-2xl">
-            {navList &&
-              navList.map((nav) => {
-                return (
-                  <li
-                    key={nav.id}
-                    className="hover:text-[#7A63FF] transition duration-200 ease-in-out"
-                  >
-                    <a
-                      className="hover:cursor-pointer"
-                      onClick={() => {
-                        document
-                          .getElementById(`${nav.path}`)
-                          ?.scrollIntoView({ behavior: "smooth" });
-                      }}
-                    >
-                      {nav.content}
-                    </a>
-                  </li>
-                );
-              })}
-            <li className="text-[#7A63FF] hover:text-white hover:bg-[#7A63FF] transition duration-200 ease-in-out border-2 border-[#7A63FF] rounded-full">
-              <a
-                className="block w-full h-full p-3 text-center"
-                href="mailto:alanguilherme13@outlook.com?subject=Contato%20do%20Portfólio&body=Olá,%20gostaria%20de%20falar%20com%20você!"
+            {navList.map((nav) => (
+              <li
+                key={nav.id}
+                className="hover:text-[#7A63FF] transition duration-200 ease-in-out"
               >
-                Entre em Contato
+                <a
+                  className="hover:cursor-pointer"
+                  onClick={() => {
+                    document
+                      .getElementById(nav.path)
+                      ?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                >
+                  {locale === 'pt' ? <p>{nav.contentPt}</p> : <p>{nav.contentEn}</p>}
+                </a>
+              </li>
+            ))}
+            <li className="text-[#7A63FF] hover:text-white hover:bg-[#7A63FF] transition duration-200 ease-in-out border-2 border-[#7A63FF] rounded-full">
+              <a className="block w-full h-full p-3 text-center" href="/contact">
+                {intl.formatMessage({ id: "contact" })}
               </a>
             </li>
           </ul>
@@ -62,26 +76,26 @@ export default function Header() {
           </button>
         </div>
       </section>
+
       {menuOpen && (
-        <nav className="md:hidden font-zain font-medium fixed top-[6.5rem] left-0 w-full bg-[#F8F8FF] dark:bg-black shadow-md z-50">
+        <nav className="md:hidden font-zain font-medium fixed top-[4.5rem] left-0 w-full bg-[#F8F8FF] dark:bg-black shadow-md z-50">
           <ul className="flex flex-col items-center text-center text-black text-2xl pb-4 dark:text-white">
-            {navList &&
-              navList.map((nav) => {
-                return (
-                  <li
-                    key={nav.id}
-                    className="hover:text-[#7A63FF] transition duration-200 ease-in-out"
-                  >
-                    <a href={`${nav.path}`}>{nav.content}</a>
-                  </li>
-                );
-              })}
+            {navList.map((nav) => (
+              <li
+                key={nav.id}
+                className="hover:text-[#7A63FF] transition duration-200 ease-in-out"
+              >
+                <a href={nav.path}>
+                  {locale === 'pt' ? <p>{nav.contentPt}</p> : <p>{nav.contentEn}</p>}
+                </a>
+              </li>
+            ))}
             <li className="w-[40%] pt-6 pb-2">
               <a
-                href="/contato"
+                href="/contact"
                 className="text-[#7A63FF] active:text-white active:bg-[#7A63FF] transition duration-200 ease-in-out border-2 border-[#7A63FF] rounded-xl px-11 py-2"
               >
-                Contato
+                {intl.formatMessage({ id: "contact" })}
               </a>
             </li>
           </ul>

@@ -9,18 +9,22 @@ import {
   CarouselPreviousSeta,
   CarouselNextSeta,
 } from "../ui/carousel";
+import { useIntl } from "react-intl";
+import { useLocale } from "@/context/LocaleContext";
 
 export default function MyProjects() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const intl = useIntl();
+  const { locale } = useLocale();
 
   return (
     <main id="projetos" className="flex-col w-full h-fit text-center pb-40">
       <section className="justify-items-center md:h-[450px] max-sm:h-[300px] bg-[#6E07F3] ">
         <h1 className="text-white font-zain font-bold text-5xl pb-6 pt-24">
-          My Projects
+        {intl.formatMessage({ id: "projectsTitle" })}
         </h1>
         <span className="text-white font-zain text-2xl pb-10">
-          A few of my proojects that i&apos;ve already work on in.
+          {intl.formatMessage({ id: "projectsDescription" })}
         </span>
       </section>
       <section className="relative md:top-[-150px] max-sm:top-[-100px] md:w-[75%] max-sm:w-[115%] justify-self-center">
@@ -55,7 +59,8 @@ export default function MyProjects() {
                         <h1 className="w-[60%] md:text-5xl ss:text-3xl">
                           {projects.project}
                         </h1>
-                        <p className="text-lg">{projects.description}</p>
+                          {locale === 'pt' ? <p className="text-lg">{projects.descriptionPt}</p> : <p className="text-lg">{projects.descriptionEn}</p>}
+                        
                         <section>
                           <ul className="flex flex-wrap">
                             {projects.stacks.map((stack) => {

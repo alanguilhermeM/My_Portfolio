@@ -1,4 +1,4 @@
-// import Image from "next/image";
+"use client";
 
 import AboutMe from "@/components/AboutMe";
 import Certifications from "@/components/Certifications";
@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import Landing from "@/components/Landing";
 import MyProjects from "@/components/MyProjects";
 import Testimonials from "@/components/Testimonials";
+import { LanguageToggle } from "@/components/ui/languageToggle";
 import { ModeToggle } from "@/components/ui/modeToggle";
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
       <Testimonials />
       <Footer />
       <section className="fixed bottom-6 right-6">
+        <LanguageToggle />
         <ModeToggle />
       </section>
     </div>

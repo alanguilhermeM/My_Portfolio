@@ -1,6 +1,7 @@
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import { Zain } from "next/font/google";
+import { LocaleProvider } from "@/context/LocaleContext";
 
 const mainFontFamily = Zain({
   weight: ["400", "700"],
@@ -16,14 +17,16 @@ export default function RootLayout({
   return (
     <html lang="en" className={mainFontFamily.variable}>
       <body>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <main>{children}</main>
-        </ThemeProvider>
+        <LocaleProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem={false}
+            disableTransitionOnChange
+          >
+            <main>{children}</main>
+          </ThemeProvider>
+        </LocaleProvider>
       </body>
     </html>
   );

@@ -1,7 +1,7 @@
 const navList = [
-    { id: 0, content: "Projetos", path: 'projetos' },
-    { id: 1, content: "Sobre Mim", path: 'sobre' },
-    { id: 2, content: "CV", path: 'cv' },
+    { id: 0, contentPt: "Projetos", contentEn: "Projects", path: 'projetos' },
+    { id: 1, contentPt: "Sobre Mim", contentEn: "About Me", path: 'sobre' },
+    { id: 2, contentPt: "CV", contentEn: "CV", path: 'cv' },
 ]
 
 export default navList;

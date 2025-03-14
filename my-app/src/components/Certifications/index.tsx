@@ -2,17 +2,19 @@
 import React, { useState } from "react";
 import certificationsList from "@/utils/certificationsList";
 import Image from "next/image";
+import { useIntl } from "react-intl";
 
 export default function Certifications() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const intl = useIntl();
 
   return (
     <main className="flex-col justify-self-center text-center w-[75%] h-fit ">
       <h1 className="text-[#141c3a] dark:text-white font-zain font-bold text-5xl pb-6">
-        My Certificates
+        {intl.formatMessage({ id: "certificateTitle" })}
       </h1>
       <span className="text-[#141c3a] dark:text-white font-zain text-2xl pb-10">
-        Here are a few of of my certificates that i aquired around time.
+        {intl.formatMessage({ id: "certificateDescription" })}
       </span>
       <section className="grid md:grid-cols-3 ss:grid-cols-1 gap-4 pt-10">
         {certificationsList.map((certification, index) => {
@@ -36,12 +38,11 @@ export default function Certifications() {
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
                   <span className="relative text-white md:top-10 ss:top-4 w-[80%] font-zain md:text-3xl ss:text-xl">
-                    Click the button below to be redirected to the certificate
-                    credentials
+                    {intl.formatMessage({ id: "certificateCredencials" })}
                   </span>
                   <a href={certification.link} target="_blank">
                     <button className="relative md:bottom-6 ss:bottom-2 bg-transparent hover:bg-[#6E07F3] border-2 border-[#6E07F3] text-white md:text-2xl ss:text-xl font-zain px-4 py-2 rounded-3xl transition-colors duration-300">
-                        View Credentials
+                      {intl.formatMessage({ id: "certificateButton" })}
                     </button>
                   </a>
                 </div>
