@@ -4,11 +4,18 @@ import { IntlProvider } from "react-intl";
 import enMessages from "@/locales/en.json";
 import ptMessages from "@/locales/pt.json";
 
+// Tipando a estrutura do contexto
+interface LocaleContextType {
+  locale: string;
+  setLocale: (locale: string) => void;
+}
+
 const messages = { en: enMessages, pt: ptMessages };
 
-const LocaleContext = createContext({
+// Criando o contexto com o tipo
+const LocaleContext = createContext<LocaleContextType>({
   locale: "pt",
-  setLocale: (locale: string) => {}
+  setLocale: () => {} // Função vazia por padrão
 });
 
 export function LocaleProvider({ children }: { children: React.ReactNode }) {
