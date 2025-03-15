@@ -9,76 +9,63 @@ export default function Skills() {
       <article className="flex ss:flex-col md:flex-row w-full font-zain">
         <section className="flex-col justify-items-center text-center md:w-1/3 ss:w-full py-16 px-12 text-black md:border-r-[1px] ss:border-b-[1px] border-[#E6ECF8]">
           <div className="w-fit h-fit p-4 rounded-full bg-[#5BE9B9]">
-            <Image src='/front.svg' width={40} height={40} alt="backend-logo" className="" />
+            <Image src='/front.svg' width={40} height={40} alt="frontend-logo" />
           </div>
           <h1 className="my-10 font-bold text-3xl">{intl.formatMessage({ id: "front" })}</h1>
 
-          <p className="text-xl">
-            {intl.formatMessage({ id: "frontDescription" })}
-          </p>
+          <p className="text-xl">{intl.formatMessage({ id: "frontDescription" })}</p>
 
           <h2 className="mt-8 mb-4 font-medium text-2xl text-[#7A63FF]">{intl.formatMessage({ id: "stacks" })}</h2>
-          <span className="text-xl">exemple 1, exemple 2, exemple 3, exemple 4</span>
+          <span className="text-xl">HTML, CSS, TypeScript, React.js, Next.js, Jest</span>
 
           <h2 className="mt-8 mb-4 font-medium text-2xl text-[#7A63FF]">{intl.formatMessage({ id: "tools" })}</h2>
           <ul className="text-xl">
-            <li>One</li>
-            <li>One</li>
-            <li>One</li>
-            <li>One</li>
-            <li>One</li>
-            <li>One</li>
-            <li>One</li>
+            <li>TailwindCSS</li>
+            <li>Bootstrap</li>
+            <li>Chrome DevTools</li>
+            <li>VS Code</li>
+            <li>React Developer Tools</li>
           </ul>
         </section>
 
         <section className="flex-col justify-items-center text-center md:w-1/3 ss:w-full py-16 px-12 text-black md:border-r-[1px] ss:border-b-[1px] border-[#E6ECF8]">
           <div className="w-fit h-fit p-4 rounded-full bg-[#5BE9B9]">
-            <Image src='/back.svg' width={40} height={40} alt="backend-logo" className="" />
+            <Image src='/back.svg' width={40} height={40} alt="backend-logo" />
           </div>
           <h1 className="my-10 font-bold text-3xl">{intl.formatMessage({ id: "back" })}</h1>
 
-          <p className="text-xl">
-            {intl.formatMessage({ id: "backDescription" })}
-          </p>
+          <p className="text-xl">{intl.formatMessage({ id: "backDescription" })}</p>
 
           <h2 className="mt-8 mb-4 font-medium text-2xl text-[#7A63FF]">{intl.formatMessage({ id: "stacks" })}</h2>
-          <span className="text-xl">exemple 1, exemple 2, exemple 3, exemple 4</span>
+          <span className="text-xl">Nest.js, Node.js, Express, MySQL, MongoDB, Prisma, TypeORM</span>
 
           <h2 className="mt-8 mb-4 font-medium text-2xl text-[#7A63FF]">{intl.formatMessage({ id: "tools" })}</h2>
           <ul className="text-xl">
-            <li>One</li>
-            <li>One</li>
-            <li>One</li>
-            <li>One</li>
-            <li>One</li>
-            <li>One</li>
-            <li>One</li>
+            <li>Postman</li>
+            <li>Beekeeper Studio</li>
+            <li>Docker</li>
+            <li>Prisma Studio</li>
           </ul>
         </section>
 
         <section className="flex-col justify-items-center text-center md:w-1/3 ss:w-full py-16 px-12 text-black">
           <div className="w-fit h-fit p-4 rounded-full bg-[#5BE9B9]">
-            <Image src='/front.svg' width={40} height={40} alt="backend-logo" className="" />
+            <Image src='/tech.svg' width={40} height={40} alt="tech-logo" />
           </div>
           <h1 className="my-10 font-bold text-3xl">{intl.formatMessage({ id: "science" })}</h1>
 
-          <p className="text-xl">
-            {intl.formatMessage({ id: "scienceDescription" })}
-          </p>
+          <p className="text-xl">{intl.formatMessage({ id: "scienceDescription" })}</p>
 
           <h2 className="mt-8 mb-4 font-medium text-2xl text-[#7A63FF]">{intl.formatMessage({ id: "stacks" })}</h2>
-          <span className="text-xl">exemple 1, exemple 2, exemple 3, exemple 4</span>
+          <span className="text-xl">Git, GitHub, Docker, GitHub Actions, Vercel</span>
 
           <h2 className="mt-8 mb-4 font-medium text-2xl text-[#7A63FF]">{intl.formatMessage({ id: "tools" })}</h2>
           <ul className="text-xl">
-            <li>One</li>
-            <li>One</li>
-            <li>One</li>
-            <li>One</li>
-            <li>One</li>
-            <li>One</li>
-            <li>One</li>
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>Docker</li>
+            <li>GitHub Actions</li>
+            <li>Vercel</li>
           </ul>
         </section>
       </article>
