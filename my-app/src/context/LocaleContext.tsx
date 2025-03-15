@@ -4,22 +4,26 @@ import { IntlProvider } from "react-intl";
 import enMessages from "@/locales/en.json";
 import ptMessages from "@/locales/pt.json";
 
-// Tipando a estrutura do contexto
+// Definindo o tipo de mensagens com base nos arquivos JSON
+type Messages = typeof enMessages; // ou typeof ptMessages, já que ambos têm o mesmo formato
+
+const messages: { [key in 'en' | 'pt']: Messages } = {
+  en: enMessages,
+  pt: ptMessages,
+};
+
 interface LocaleContextType {
-  locale: string;
-  setLocale: (locale: string) => void;
+  locale: 'en' | 'pt';  // Definindo que o locale pode ser apenas 'en' ou 'pt'
+  setLocale: (locale: 'en' | 'pt') => void;
 }
 
-const messages = { en: enMessages, pt: ptMessages };
-
-// Criando o contexto com o tipo
 const LocaleContext = createContext<LocaleContextType>({
-  locale: "pt",
-  setLocale: () => {} // Função vazia por padrão
+  locale: 'pt',
+  setLocale: () => {},
 });
 
 export function LocaleProvider({ children }: { children: React.ReactNode }) {
-  const [locale, setLocale] = useState("pt");
+  const [locale, setLocale] = useState<'en' | 'pt'>('pt');  // Tipando o estado do locale
 
   return (
     <LocaleContext.Provider value={{ locale, setLocale }}>
