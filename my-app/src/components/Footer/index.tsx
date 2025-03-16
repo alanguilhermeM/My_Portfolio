@@ -9,15 +9,15 @@ export default function Footer() {
 
   return (
     <main className="grid w-full">
-      <aside className="md:w-[72%] ss:w-[90%] relative md:top-[55%] ss:top-[70%] justify-self-center h-fit rounded-xl bg-[#141c3a] shadow-sm shadow-[#141c3a]">
+      <aside className="max-xl:w-[90%] ss:w-[90%] max-ss:w-[95%] relative md:top-[55%] ss:top-[70%] max-ss:top-[50%] justify-self-center h-fit rounded-xl bg-[#141c3a] shadow-sm shadow-[#141c3a]">
         <div className="md:flex ss:grid md:justify-around ss:justify-center py-8 px-10 items-center text-white text-center">
-          <h1 className="md:w-1/3 ss:w-full font-zain font-bold text-4xl">
+          <h1 className="md:w-1/3 ss:w-full max-ss:w-full font-zain max-ss:mb-2  font-bold text-4xl">
             {intl.formatMessage({ id: "startProject" })}
           </h1>
-          <span className="md:w-1/3 ss:w-full py-4 flex-wrap font-zain text-2xl">
+          <p className="md:w-1/3 ss:w-full max-ss:w-[90%] max-ss:py-4 py-4 flex-wrap font-zain text-2xl">
             {intl.formatMessage({ id: "startDescription" })}
-          </span>
-          <div className="md:w-1/3 ss:w-full ">
+          </p>
+          <div className="md:w-1/3 ss:w-full max-ss:w-full ">
             <button className="flex justify-self-center items-center px-6 py-2 font-zain text-3xl border-[2px] border-[#5BE9B9] rounded-full hover:bg-[#5be9b9] hover:text-[#141c3a] transition-colors duration-300">
               <svg
                 className=""
@@ -42,7 +42,7 @@ export default function Footer() {
           </div>
         </div>
       </aside>
-      <footer className="grid justify-center justify-items-center bg-[#6E07F3] w-full md:h-fit ss:h-[700px] py-10">
+      <footer className="grid justify-center justify-items-center bg-[#6E07F3] w-full md:h-fit max-md:h-[700px] py-10">
         <Image
           src="white-logo.svg"
           width={200}

@@ -22,7 +22,7 @@ export default function Testimonials() {
       <p className="text-[#141c3a] dark:text-white font-zain text-2xl pb-10">
         {intl.formatMessage({ id: "testimonialsDescription" })}
       </p>
-      <section className="md:w-1/2 max-sm:w-full justify-self-center">
+      <section className="max-lg:w-full max-sm:w-full lg:w-2/3 justify-self-center">
         <Carousel>
           <CarouselContent>
             {testimonialsList.map((testimonial) => {

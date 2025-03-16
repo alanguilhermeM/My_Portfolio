@@ -27,13 +27,13 @@ export default function MyProjects() {
           {intl.formatMessage({ id: "projectsDescription" })}
         </span>
       </section>
-      <section className="relative md:top-[-150px] max-sm:top-[-100px] md:w-[75%] max-sm:w-[115%] justify-self-center">
+      <section className="relative md:top-[-150px] max-sm:top-[-100px] md:w-[75%] max-ss:w-[100%] max-sm:w-[100%] justify-self-center">
         <Carousel className="h-fit max-sm:scale-75">
-          <CarouselContent className="md:w-[700px] h-[340px] ">
+          <CarouselContent className="md:w-[700px] max-md:w-[450px] max-ss:w-[550px] h-[340px] ">
             {projectsList.map((projects) => {
               return (
                 <CarouselItem
-                  className="flex justify-center relative group h-[340px]"
+                  className="flex justify-center relative group h-[340px] max-md:scale-[85%] max-ss:scale-[100%]"
                   key={projects.id}
                 >
                   <div className="relative w-[550px] h-full">

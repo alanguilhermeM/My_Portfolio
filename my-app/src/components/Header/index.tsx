@@ -3,8 +3,6 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import navList from "@/utils/navList";
-// import { useLocale } from "@/context/LocaleContext";
-// import { useIntl } from "react-intl";
 import { useLocale } from "@/context/LocaleContext";
 import { useIntl } from "react-intl";
 
@@ -29,8 +27,8 @@ export default function Header() {
 
   return (
     <header className="flex justify-center w-full">
-      <section className="flex justify-between xl:w-[70%] sm:w-[90%] ss:w-[90%] pb-10">
-        <article className="w-[50%] max-sm:w-[20%] max-sm:scale-150">
+      <section className="flex justify-between xl:w-[70%] sm:w-[90%] ss:w-[90%] max-ss:w-[90%] pb-10">
+        <article className="w-[50%] max-sm:w-[20%] max-sm:scale-150 max-ss:w-[25%]">
           <Image
             src="/purple-logo.svg"
             alt="Logo"
@@ -39,27 +37,51 @@ export default function Header() {
             className="hover:scale-105 transition duration-500 ease-in-out"
           />
         </article>
-        <nav className="hidden font-zain font-medium md:flex items-center w-[50%] sm:w-[40%] ss:w-[80%]">
+        <nav className="hidden font-zain font-medium md:flex items-center w-[50%] max-sm:w-[40%] ss:w-[80%]">
           <ul className="flex justify-around w-full items-center text-black dark:text-white text-2xl">
             {navList.map((nav) => (
               <li
                 key={nav.id}
                 className="hover:text-[#7A63FF] transition duration-200 ease-in-out"
               >
-                <a
-                  className="hover:cursor-pointer"
-                  onClick={() => {
-                    document
-                      .getElementById(nav.path)
-                      ?.scrollIntoView({ behavior: "smooth" });
-                  }}
-                >
-                  {locale === 'pt' ? <p>{nav.contentPt}</p> : <p>{nav.contentEn}</p>}
-                </a>
+                {nav.path.startsWith("/") ? (
+                  // Abre o PDF (CV) em nova aba
+                  <a
+                    href={nav.path}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:cursor-pointer"
+                  >
+                    {locale === "pt" ? (
+                      <p>{nav.contentPt}</p>
+                    ) : (
+                      <p>{nav.contentEn}</p>
+                    )}
+                  </a>
+                ) : (
+                  // Rola até a seção da página
+                  <a
+                    className="hover:cursor-pointer"
+                    onClick={() => {
+                      document
+                        .getElementById(nav.path)
+                        ?.scrollIntoView({ behavior: "smooth" });
+                    }}
+                  >
+                    {locale === "pt" ? (
+                      <p>{nav.contentPt}</p>
+                    ) : (
+                      <p>{nav.contentEn}</p>
+                    )}
+                  </a>
+                )}
               </li>
             ))}
             <li className="text-[#7A63FF] hover:text-white hover:bg-[#7A63FF] transition duration-200 ease-in-out border-2 border-[#7A63FF] rounded-full">
-              <a className="block w-full h-full p-3 text-center" href="/contact">
+              <a
+                className="block w-full h-full p-3 text-center"
+                href="/contact"
+              >
                 {intl.formatMessage({ id: "contact" })}
               </a>
             </li>
@@ -86,14 +108,18 @@ export default function Header() {
                 className="hover:text-[#7A63FF] transition duration-200 ease-in-out"
               >
                 <a href={nav.path}>
-                  {locale === 'pt' ? <p>{nav.contentPt}</p> : <p>{nav.contentEn}</p>}
+                  {locale === "pt" ? (
+                    <p>{nav.contentPt}</p>
+                  ) : (
+                    <p>{nav.contentEn}</p>
+                  )}
                 </a>
               </li>
             ))}
-            <li className="w-[40%] pt-6 pb-2">
+            <li className="w-[50%] max-ss:w-[70%] pt-6 pb-2">
               <a
                 href="/contact"
-                className="text-[#7A63FF] active:text-white active:bg-[#7A63FF] transition duration-200 ease-in-out border-2 border-[#7A63FF] rounded-xl px-11 py-2"
+                className="text-[#7A63FF] active:text-white active:bg-[#7A63FF] transition duration-200 ease-in-out border-2 border-[#7A63FF] rounded-xl px-3 py-2"
               >
                 {intl.formatMessage({ id: "contact" })}
               </a>

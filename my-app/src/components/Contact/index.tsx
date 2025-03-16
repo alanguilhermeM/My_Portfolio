@@ -39,10 +39,10 @@ export default function ContactForm() {
       <form
         ref={form}
         onSubmit={sendEmail}
-        className="flex flex-col justify-self-center md:w-[40%] max-sm:w-[80%] font-zain text-2xl text-gray-500"
+        className="flex flex-col justify-self-center xl:w-[40%] max-xl:w-[80%] font-zain text-2xl text-gray-500"
       >
-        <section className="flex max-sm:flex-col justify-between py-8">
-          <div className="grid w-1/2 max-sm:w-full">
+        <section className="flex max-xl:flex-col justify-between py-8">
+          <div className="grid w-1/2 max-xl:w-full">
             <label className="pb-2">{intl.formatMessage({ id: "contactName" })}</label>
             <input
               type="text"
@@ -53,7 +53,7 @@ export default function ContactForm() {
 
           </div>
 
-          <div className="grid w-1/2 max-sm:w-full">
+          <div className="grid w-1/2 max-xl:w-full">
             <label className="pb-2">{intl.formatMessage({ id: "contactEmail" })}</label>
             <input
               type="email"
@@ -74,7 +74,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={isSending}
-          className="w-[180px] h-[50px] text-[#7A63FF] font-zain font-medium text-2xl hover:text-white hover:bg-[#7A63FF] transition duration-200 ease-in-out border-2 border-[#7A63FF] rounded-full mt-14 self-center max-sm:mb-10"
+          className="w-[180px] h-[50px] text-[#7A63FF] font-zain font-medium text-2xl hover:text-white hover:bg-[#7A63FF] transition duration-200 ease-in-out border-2 border-[#7A63FF] rounded-full mt-14 self-center max-xl:mb-10"
         >
           {isSending ? <p>{intl.formatMessage({ id: "contactSending" })}</p> : <p>{intl.formatMessage({ id: "contactSubmit" })}</p> }
         </button>

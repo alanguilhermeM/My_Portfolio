@@ -6,9 +6,9 @@ import Link from "next/link";
 export default function ContactHeader() {
   return (
     <main>
-        <header className="flex justify-center w-full h-[150px] max-sm:h-[120px]">
-          <section className="flex justify-between xl:w-[70%] max-sm:w-[90%]">
-            <article className="w-[50%] max-sm:relative max-sm:right-10 self-center max-sm:w-[40%]">
+        <header className="flex justify-center w-full h-[150px] max-xl:h-[120px]">
+          <section className="flex justify-between xl:w-[70%] max-xl:w-[90%]">
+            <article className="w-[50%] max-xl:relative max-xl:right-10 self-center max-xl:w-[40%]">
               <Image
                 src="/purple-logo.svg"
                 alt="Logo"
@@ -17,7 +17,7 @@ export default function ContactHeader() {
                 className="md:hover:scale-105 max-sm:scale-115 transition duration-500 ease-in-out"
               />
             </article>
-            <nav className="md:flex w-[50%] max-sm:self-center max-sm:w-[40%]">
+            <nav className="lg:flex w-[50%] max-xl:self-center max-xl:w-[40%]">
               <ul className="flex justify-end items-center  w-full text-black">
                 <li>
                   <Link href="/">
