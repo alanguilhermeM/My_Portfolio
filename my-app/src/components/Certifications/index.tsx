@@ -9,7 +9,8 @@ export default function Certifications() {
   const intl = useIntl();
 
   return (
-    <main className="flex flex-col justify-center items-center justify-self-center text-center w-[75%] h-fit ">
+    <main className="flex flex-col justify-center items-center text-center w-full h-fit ">
+      <article className="w-3/4">
       <h1 className="text-[#141c3a] dark:text-white font-zain font-bold text-5xl pb-6">
         {intl.formatMessage({ id: "certificateTitle" })}
       </h1>
@@ -51,7 +52,8 @@ export default function Certifications() {
           );
         })}
       </section>
-      <div className="my-40 justify-self-center w-[133.3%]" />
+      </article>
+      <div className="my-40 justify-self-center w-full" />
     </main>
   );
 }
