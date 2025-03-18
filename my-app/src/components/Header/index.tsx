@@ -45,7 +45,6 @@ export default function Header() {
                 className="hover:text-[#7A63FF] transition duration-200 ease-in-out"
               >
                 {nav.path.startsWith("/") ? (
-                  // Abre o PDF (CV) em nova aba
                   <a
                     href={nav.path}
                     target="_blank"
@@ -59,7 +58,6 @@ export default function Header() {
                     )}
                   </a>
                 ) : (
-                  // Rola até a seção da página
                   <a
                     className="hover:cursor-pointer"
                     onClick={() => {
@@ -100,7 +98,7 @@ export default function Header() {
       </section>
 
       {menuOpen && (
-        <nav className="md:hidden font-zain font-medium fixed top-[4.5rem] left-0 w-full bg-[#F8F8FF] dark:bg-black shadow-md z-50">
+        <nav className="md:hidden font-zain font-medium absolute top-[4.5rem] left-0 w-full bg-[#F8F8FF] dark:bg-black shadow-md z-50">
           <ul className="flex flex-col items-center text-center text-black text-2xl pb-4 dark:text-white">
             {navList.map((nav) => (
               <li

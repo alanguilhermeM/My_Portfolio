@@ -8,21 +8,26 @@
   padding: 0;
 }
 
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 ::-webkit-scrollbar {
-  width: 12px; /* Largura da scrollbar */
+  width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #1e1e1e; /* Cor do fundo da scrollbar */
+  background: #1e1e1e;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #6E07F3; /* Cor da "alça" da scrollbar */
-  border-radius: 10px; /* Bordas arredondadas */
+  background: #6E07F3;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #5204c9; /* Cor ao passar o mouse */
+  background: #5204c9;
 }
 
 @layer base {
