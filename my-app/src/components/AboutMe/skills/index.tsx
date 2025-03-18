@@ -7,7 +7,7 @@ export default function Skills() {
   return (
     <main className="flex relative top-[-180px] md:w-[90%] max-sm:w-[84%] h-fit bg-[#F8F8FF] border-[1px] border-[#E6ECF8] rounded-2xl shadow-sm">
       <article className="flex ss:flex-col max-ss:flex-col md:flex-row w-full font-zain">
-        <section className="flex-col justify-items-center text-center md:w-1/3 ss:w-full py-16 px-12 text-black md:border-r-[1px] ss:border-b-[1px] max-ss:border-b-[1px] border-[#E6ECF8]">
+        <section className="flex flex-col justify-center items-center text-center md:w-1/3 ss:w-full py-16 px-12 text-black md:border-r-[1px] ss:border-b-[1px] max-ss:border-b-[1px] border-[#E6ECF8]">
           <div className="flex justify-center items-center w-[70px] h-[70px] p-4 rounded-full bg-[#5BE9B9] relative">
             <Image src='/front.svg' width={40} height={40} alt="frontend-logo" className="absolute inset-0 m-auto"/>
           </div>
@@ -28,7 +28,7 @@ export default function Skills() {
           </ul>
         </section>
 
-        <section className="flex-col justify-items-center text-center md:w-1/3 ss:w-full py-16 px-12 text-black md:border-r-[1px] ss:border-b-[1px] max-ss:border-b-[1px] border-[#E6ECF8]">
+        <section className="flex flex-col justify-center items-center text-center md:w-1/3 ss:w-full py-16 px-12 text-black md:border-r-[1px] ss:border-b-[1px] max-ss:border-b-[1px] border-[#E6ECF8]">
           <div className="flex justify-center items-center w-[70px] h-[70px] p-4 rounded-full bg-[#5BE9B9] relative">
             <Image src='/back.svg' width={40} height={40} alt="backend-logo" className="absolute inset-0 m-auto" />
           </div>
@@ -48,7 +48,7 @@ export default function Skills() {
           </ul>
         </section>
 
-        <section className="flex-col justify-items-center text-center md:w-1/3 ss:w-full py-16 px-12 text-black">
+        <section className="flex flex-col justify-center items-center text-center md:w-1/3 ss:w-full py-16 px-12 text-black">
           <div className="flex justify-center items-center w-[70px] h-[70px] p-4 rounded-full bg-[#5BE9B9] relative">
             <Image src='/tech.svg' width={40} height={40} alt="tech-logo" className="absolute inset-0 m-auto" />
           </div>
