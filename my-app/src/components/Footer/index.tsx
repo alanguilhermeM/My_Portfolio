@@ -17,7 +17,7 @@ export default function Footer() {
           <p className="md:w-1/3 ss:w-full max-ss:w-[90%] max-ss:py-4 py-4 flex-wrap font-zain text-2xl">
             {intl.formatMessage({ id: "startDescription" })}
           </p>
-          <div className="md:w-1/3 ss:w-full max-ss:w-full ">
+          <div className="flex justify-center md:w-1/3 ss:w-full max-ss:w-full ">
             <button className="flex justify-self-center items-center px-6 py-2 font-zain text-3xl border-[2px] border-[#5BE9B9] rounded-full hover:bg-[#5be9b9] hover:text-[#141c3a] transition-colors duration-300">
               <svg
                 className=""

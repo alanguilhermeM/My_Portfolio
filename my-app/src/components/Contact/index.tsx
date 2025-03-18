@@ -39,7 +39,7 @@ export default function ContactForm() {
       <form
         ref={form}
         onSubmit={sendEmail}
-        className="flex flex-col justify-self-center xl:w-[40%] max-xl:w-[80%] font-zain text-2xl text-gray-500"
+        className="flex flex-col justify-center items-center xl:w-[40%] max-xl:w-[80%] font-zain text-2xl text-gray-500"
       >
         <section className="flex max-xl:flex-col justify-between py-8">
           <div className="grid w-1/2 max-xl:w-full">

@@ -15,7 +15,7 @@ export default function Testimonials() {
   const { locale } = useLocale();
 
   return (
-    <main className="flex-col justify-self-center text-center w-[75%] h-fit pb-14">
+    <main className="flex flex-col justify-center items-center text-center w-[75%] mx-auto h-fit pb-14">
       <h1 className="text-[#141c3a] dark:text-white font-zain font-bold text-4xl pb-2">
         {intl.formatMessage({ id: "testimonialsTitle" })}
       </h1>
