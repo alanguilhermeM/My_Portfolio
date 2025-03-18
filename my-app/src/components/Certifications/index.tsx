@@ -9,7 +9,7 @@ export default function Certifications() {
   const intl = useIntl();
 
   return (
-    <main className="flex-col justify-self-center text-center w-[75%] h-fit ">
+    <main className="flex flex-col justify-center items-center justify-self-center text-center w-[75%] h-fit ">
       <h1 className="text-[#141c3a] dark:text-white font-zain font-bold text-5xl pb-6">
         {intl.formatMessage({ id: "certificateTitle" })}
       </h1>
