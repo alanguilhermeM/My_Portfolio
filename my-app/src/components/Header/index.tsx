@@ -105,13 +105,33 @@ export default function Header() {
                 key={nav.id}
                 className="hover:text-[#7A63FF] transition duration-200 ease-in-out"
               >
-                <a href={nav.path}>
-                  {locale === "pt" ? (
-                    <p>{nav.contentPt}</p>
-                  ) : (
-                    <p>{nav.contentEn}</p>
-                  )}
-                </a>
+                {nav.path.startsWith("/") ? (
+                  <a
+                    href={nav.path}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {locale === "pt" ? (
+                      <p>{nav.contentPt}</p>
+                    ) : (
+                      <p>{nav.contentEn}</p>
+                    )}
+                  </a>
+                ) : (
+                  <a
+                    onClick={() => {
+                      document
+                        .getElementById(nav.path)
+                        ?.scrollIntoView({ behavior: "smooth" });
+                    }}
+                  >
+                    {locale === "pt" ? (
+                      <p>{nav.contentPt}</p>
+                    ) : (
+                      <p>{nav.contentEn}</p>
+                    )}
+                  </a>
+                )}
               </li>
             ))}
             <li className="w-[50%] max-ss:w-[70%] pt-6 pb-2">

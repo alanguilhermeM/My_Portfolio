@@ -30,12 +30,10 @@ export default function Certifications() {
                   hoveredIndex === index ? "blur-sm brightness-50" : ""
                 }`}
                 onMouseEnter={() => setHoveredIndex(certification.id)}
-                // onMouseLeave={() => setHoveredIndex(null)}
               />
               {hoveredIndex === index && (
                 <div
-                  className="absolute inset-0 flex flex-wrap items-center justify-center rounded-xl hover:scale-105 transition-all ease-in-out duration-500  "
-                  //   onMouseEnter={() => setHoveredIndex(certification.id)}
+                  className="absolute inset-0 flex flex-wrap items-center justify-center rounded-xl hover:scale-105 transition-all ease-in-out duration-500"
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
                   <span className="relative text-white max-xl:top-6 max-ss:top-2 ss:top-4 w-[80%] font-zain max-lg:text-5xl xl:text-3xl max-xl:text-xl max-md:text-xl">
