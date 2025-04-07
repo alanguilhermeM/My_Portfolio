@@ -12,7 +12,7 @@ const projectsList = [
   {
     id: 1,
     deploy:
-      "https://frontend-by-b2bit-9lgo-k2u0takus-guilherme-mansurs-projects.vercel.app/",
+      "https://data-clix-dt.vercel.app/",
     github: "https://github.com/alanguilhermeM/frontend-by-b2bit",
     project: "Weather Forecast",
     image: '/projeto2.png',
