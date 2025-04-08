@@ -12,7 +12,7 @@ import { ModeToggle } from "@/components/ui/modeToggle";
 
 export default function Home() {
   return (
-    <div className="">
+    <div>
       <Header />
       <Landing />
       <AboutMe />

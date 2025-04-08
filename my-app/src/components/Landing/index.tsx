@@ -15,7 +15,7 @@ export default function Landing() {
             <Image src="/avatar.png" width={300} height={300} alt="avatar" className="object-cover" />
           </article>
         </div>
-        <article className="md:mt-16 ss:mt-12 flex justify-center max-3xl:relative max-ss:top-[142px] max-3xl:top-[80px] ">
+        <article className="md:mt-16 ss:mt-12 flex justify-center max-3xl:relative 3xl:relative max-ss:top-[142px] max-3xl:top-[80px] 3xl:top-[80px] ">
           <Image 
             src="https://mattfarley.ca/img/hero-devices.svg" 
             width={1500} 
